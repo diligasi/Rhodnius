@@ -2,8 +2,10 @@
 /.bundle
 lib/bundler/man
 
-# Ignore the database configuration file.
-config/database.yml
+# Ignore sensitive data
+"config/database.yml"
+"config/initializers/devise.rb"
+/.idea/"config/initializers/secret_token.rb"
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -14,17 +16,6 @@ spec/reports
 test/tmp
 test/version_tmp
 
-# YARD artifacts
-/.yardoc
-/_yardoc
-/doc/
-
 # Others
-/*.gem
-/*.rbc
-/.config
-coverage
-InstalledFiles
-/pkg
-/rdoc
 /.idea/
+
