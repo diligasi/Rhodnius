@@ -1,4 +1,28 @@
 Rhodnius::Application.routes.draw do
+
+  ## Showing Devise witch controller to use
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
+
+  ## Configuring Devise's routes
+  devise_scope :user do
+    get '/login' => 'devise/sessions#new'
+    get '/register' => 'devise/registrations#new'
+    get '/logoff' => 'devise/sessions#destroy'
+  end
+
+  ## Routes for SetLanguage controller
+  get '/en' => 'set_language#english', :as => :english
+  get '/pt-BR' => 'set_language#portuguese', :as => :portuguese
+  get '/es' => 'set_language#spanish', :as => :spanish
+  get 'set_language/set_session_and_redirect'
+
+  ## Normal page's routes
+  get '/about' => 'about#index', :as => :about
+  get '/cameras' => 'cameras#index', :as => :cameras
+
+  ## Resources' Pages
+  resources :cameras
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

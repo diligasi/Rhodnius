@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>Rhodnius</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= link_to 'Login', login_path %> |
+<%= link_to 'Register', register_path %>
+<p>
+  <%= link_to 'English', english_path %>
+  |
+  <%= link_to 'Português', portuguese_path %>
+  |
+  <%= link_to 'Español', spanish_path %>
+</p>
 <%= yield %>
-
+<br /><br /><br /><br />
+<%= language_links %>
 </body>
 </html>

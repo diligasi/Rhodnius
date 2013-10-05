@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @camera.name %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @camera.host %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @camera.port %>
+</p>
+
+<p>
+  <strong>Camera user:</strong>
+  <%= @camera.camera_user %>
+</p>
+
+<p>
+  <strong>Camera user password:</strong>
+  <%= @camera.camera_user_password %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @camera.description %>
+</p>
+
+<%= link_to 'Edit', edit_camera_path(@camera) %> |
+<%= link_to 'Back', cameras_path %>

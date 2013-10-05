@@ -27,6 +27,21 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Authentication solution for Rails
+gem 'devise'
+
+# Authentication system for login with Google, Facebook and Twitter
+gem 'omniauth'
+
+# Authentication with Facebook
+gem 'omniauth-facebook'
+
+# Authentication with Google
+gem 'omniauth-google-oauth2'
+
+# Authentication with Twitter
+gem 'omniauth-twitter'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

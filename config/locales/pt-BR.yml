@@ -1,0 +1,8 @@
+pt-BR:
+  hello: Olá Mundo
+  translation:
+    en: Inglês
+    pt-BR: Português
+    es: Espanhol
+  about:
+    about_title: Sobre o projeto

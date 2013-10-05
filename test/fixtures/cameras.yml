@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  host: MyString
+  port: MyString
+  camera_user: MyString
+  camera_user_password:
+  description: MyText
+
+two:
+  name: MyString
+  host: MyString
+  port: MyString
+  camera_user: MyString
+  camera_user_password:
+  description: MyText

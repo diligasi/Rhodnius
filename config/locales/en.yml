@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  translation:
+    en: English
+    pt-BR: Portuguese
+    es: Spanish
+  about:
+    about_title: About the project

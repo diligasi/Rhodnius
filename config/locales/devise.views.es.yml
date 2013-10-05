@@ -1,0 +1,38 @@
+es:
+  devise:
+    confirmations:
+      new:
+        title: Instrucciones para confirmar tu cuenta
+        submit: Enviar instrucciones para confirmar
+      link: ¿No recibiste instrucciones de confirmación?
+    passwords:
+      edit:
+        title: Cambiar contraseña
+        submit: Cambiar contraseña
+      new:
+        title: ¿Olvidaste tu contraseña?
+        submit: Vas a recibir un correo con instrucciones sobre cómo resetear tu contraseña en unos pocos minutos
+    registrations:
+      edit:
+        title: Editar %{resource}
+        update: Actualizar
+        cancel:
+          title: Cancelar mi cuenta
+          message: ¿No estás contento?
+          action: Cancelar mi cuenta
+          confirm: ¿Está seguro?
+        back: Volver
+      new:
+        title: Crear cuenta
+        submit: Crear cuenta
+    sessions:
+      new:
+        title: Iniciar sesión
+        submit: Iniciar sesión
+      link: Inicia sesión con %{provider}
+    unlocks:
+      new:
+        title: Instrucciones para desbloquear tu cuenta
+        submit: Enviar instrucciones para desbloqueo
+      link: ¿No recibiste instrucciones para desbloquear?
+
