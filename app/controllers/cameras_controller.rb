@@ -28,7 +28,7 @@ class CamerasController < ApplicationController
 
     respond_to do |format|
       if @camera.save
-        format.html { redirect_to @camera, notice: 'Camera was successfully created.' }
+        format.html { redirect_to @camera, notice: I18n.l('.cameras.notice_successfully_created') }
         format.json { render action: 'show', status: :created, location: @camera }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class CamerasController < ApplicationController
   def update
     respond_to do |format|
       if @camera.update(camera_params)
-        format.html { redirect_to @camera, notice: 'Camera was successfully updated.' }
+        format.html { redirect_to @camera, notice: I18n.l('.cameras.notice_successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

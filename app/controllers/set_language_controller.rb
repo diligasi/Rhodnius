@@ -5,7 +5,7 @@ class SetLanguageController < ApplicationController
   end
 
   def portuguese
-    I18n.locale = :"pt-BR"
+    I18n.locale = :'pt-BR'
     set_session_and_redirect
   end
 

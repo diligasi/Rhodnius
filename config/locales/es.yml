@@ -5,4 +5,22 @@ es:
     pt-BR: Portugués
     es: Español
   about:
-    about_title: Sobre el proyecto
+    title_about: Sobre el proyecto
+  cameras:
+    title_listing_cameras: Lista de cameras
+    label_name: Nombre
+    label_host: Host
+    label_port: Puerta
+    label_camera_user: Usuario
+    label_camera_password: Contraseña
+    lanel_description: Descripcíon
+    link_to_show: Detalhes
+    link_to_edit: Cambiar configuracíones
+    link_to_destroy: Apaga camera
+    link_to_back: Volver
+    link_to_new_camera: Nueva Camera
+    alert_destroy_confirm: ¿Está seguro?
+    title_editing: Editar camera
+    title_new: Nueva camera
+    notice_successfully_created: Camera creada con éxito.
+    notice_successfully_updated: Camera actualizada con éxito.

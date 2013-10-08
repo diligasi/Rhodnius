@@ -1,14 +1,14 @@
-<h1>Listing cameras</h1>
+<h1><%= I18n.t('.cameras.title_listing_cameras') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Host</th>
-      <th>Port</th>
-      <th>Camera user</th>
-      <th>Camera user password</th>
-      <th>Description</th>
+      <th><%= I18n.t('.cameras.label_name') %></th>
+      <th><%= I18n.t('.cameras.label_host') %></th>
+      <th><%= I18n.t('.cameras.label_port') %></th>
+      <th><%= I18n.t('.cameras.label_camera_user') %></th>
+      <th><%= I18n.t('.cameras.label_camera_password') %></th>
+      <th><%= I18n.t('.cameras.lanel_description') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,9 +24,9 @@
         <td><%= camera.camera_user %></td>
         <td><%= camera.camera_user_password %></td>
         <td><%= camera.description %></td>
-        <td><%= link_to 'Show', camera %></td>
-        <td><%= link_to 'Edit', edit_camera_path(camera) %></td>
-        <td><%= link_to 'Destroy', camera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to I18n.t('.cameras.link_to_show'), camera %></td>
+        <td><%= link_to I18n.t('.cameras.link_to_edit'), edit_camera_path(camera) %></td>
+        <td><%= link_to I18n.t('.cameras.link_to_destroy'), camera, method: :delete, data: { confirm: I18n.t('.cameras.alert_destroy_confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Camera', new_camera_path %>
+<%= link_to I18n.t('.cameras.link_to_new_camera'), new_camera_path %>

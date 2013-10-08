@@ -1,6 +1,6 @@
-<h1>Editing camera</h1>
+<h1><%= I18n.t('.cameras.title_editing') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @camera %> |
-<%= link_to 'Back', cameras_path %>
+<%= link_to I18n.t('.cameras.link_to_show'), @camera %> |
+<%= link_to I18n.t('.cameras.link_to_back'), cameras_path %>
