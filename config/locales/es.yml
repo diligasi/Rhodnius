@@ -1,9 +1,11 @@
 es:
   hello: "Hola, mundo"
   translation:
-    en: Inglés
-    pt-BR: Portugués
-    es: Español
+    link_to_show: Detalhes
+    link_to_edit: Cambiar configuracíones
+    link_to_destroy: Apagar
+    link_to_back: Volver
+    alert_destroy_confirm: ¿Está seguro?
   about:
     title_about: Sobre el proyecto
   cameras:
@@ -14,13 +16,18 @@ es:
     label_camera_user: Usuario
     label_camera_password: Contraseña
     lanel_description: Descripcíon
-    link_to_show: Detalhes
-    link_to_edit: Cambiar configuracíones
-    link_to_destroy: Apaga camera
-    link_to_back: Volver
     link_to_new_camera: Nueva Camera
-    alert_destroy_confirm: ¿Está seguro?
     title_editing: Editar camera
-    title_new: Nueva camera
+    title_new: Crear camera
     notice_successfully_created: Camera creada con éxito.
     notice_successfully_updated: Camera actualizada con éxito.
+  comments:
+    title_listing_comments: Lista comentarios
+    label_user: Usuario
+    label_comment: Comentario
+    label_camera: Camera
+    link_to_new_comment: Nuevo Comentario
+    title_editing: Editar comentario
+    title_new: Crear comentario
+    notice_successfully_created: Comentario creado con éxito.
+    notice_successfully_updated: Comentario actualizada con éxito.

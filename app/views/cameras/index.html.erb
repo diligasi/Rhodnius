@@ -24,9 +24,9 @@
         <td><%= camera.camera_user %></td>
         <td><%= camera.camera_user_password %></td>
         <td><%= camera.description %></td>
-        <td><%= link_to I18n.t('.cameras.link_to_show'), camera %></td>
-        <td><%= link_to I18n.t('.cameras.link_to_edit'), edit_camera_path(camera) %></td>
-        <td><%= link_to I18n.t('.cameras.link_to_destroy'), camera, method: :delete, data: { confirm: I18n.t('.cameras.alert_destroy_confirm') } %></td>
+        <td><%= link_to I18n.t('.translation.link_to_show'), camera %></td>
+        <td><%= link_to I18n.t('.translation.link_to_edit'), edit_camera_path(camera) %></td>
+        <td><%= link_to I18n.t('.translation.link_to_destroy'), camera, method: :delete, data: { confirm: I18n.t('.translation.alert_destroy_confirm') } %></td>
       </tr>
     <% end %>
   </tbody>

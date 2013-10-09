@@ -1,9 +1,11 @@
 en:
   hello: "Hello world"
   translation:
-    en: English
-    pt-BR: Portuguese
-    es: Spanish
+    link_to_show: Show
+    link_to_edit: Edit
+    link_to_destroy: Destroy
+    link_to_back: Back
+    alert_destroy_confirm: Are you sure?
   about:
     title_about: About the project
   cameras:
@@ -14,13 +16,18 @@ en:
     label_camera_user: Camera user
     label_camera_password: Camera user password
     lanel_description: Description
-    link_to_show: Show
-    link_to_edit: Edit
-    link_to_destroy: Destroy
-    link_to_back: Back
     link_to_new_camera: New Camera
-    alert_destroy_confirm: Are you sure?
     title_editing: Editing camera
     title_new: New camera
     notice_successfully_created: Camera was successfully created.
     notice_successfully_updated: Camera was successfully updated.
+  comments:
+    title_listing_comments: Listing comments
+    label_user: User
+    label_comment: Comment
+    label_camera: Camera
+    link_to_new_comment: New Comment
+    title_editing: Editing comment
+    title_new: New comment
+    notice_successfully_created: Comment was successfully created.
+    notice_successfully_updated: Comment was successfully updated.
