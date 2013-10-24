@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rhodnius</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= link_to 'Login', login_path %> |
-<%= link_to 'Register', register_path %>
-<p>
-  <%= link_to 'English', english_path %>
-  |
-  <%= link_to 'Português', portuguese_path %>
-  |
-  <%= link_to 'Español', spanish_path %>
-</p>
-<%= yield %>
-</body>
+  <head>
+    <title>Bug Brother Brazil</title>
+    <%= stylesheet_link_tag    'application', 'color', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag '/favicon.ico' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="main-bg">
+      <div class="bg">
+        <!--==============================header=================================-->
+        <header>
+          <div class="main">
+            <div class="wrapper">
+              <h1><%= link_to 'Bug Brother Brazil', root_path %></h1>
+            </div>
+            <div class="login">
+              <%= render 'home/login' %>
+              <%= render 'home/set_language' %>
+            </div>
+            <nav>
+              <%= render 'home/menu' %>
+            </nav>
+            <% if current_page?('/') %>
+              <%= render 'home/camera_panel' %>
+            <% end %>
+          </div>
+        </header>
+        <!--==============================content================================-->
+        <section id="content">
+          <div class="main">
+            <div class="container_top">
+              <div class="container_bot">
+                <div class="container_mid">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--==============================footer=================================-->
+        <footer>
+          <div class="main">
+            <sub>
+              <%=  I18n.t('.translation.hosted_by') %>
+              <%= link_to 'Heroku', 'https://www.heroku.com/', :target => '_blanck', :style => 'color: #666;' %> |
+              <%=  I18n.t('.translation.technology') %>
+              Ruby on Rails<br />
+              <%=  I18n.t('.translation.developed_by') %>
+              Diogo de Lima<br />
+              <span>Bug Brother Brazil &copy; 2013</span>
+            </sub>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>

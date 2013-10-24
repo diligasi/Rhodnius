@@ -1,13 +1,26 @@
 pt-BR:
-  hello: Olá Mundo
+  hello: Oi
   translation:
     link_to_show: Detalhes
     link_to_edit: Editar
     link_to_destroy: Deletar
     link_to_back: Voltar
     alert_destroy_confirm: Tem certeza?
-  about:
+    home: Home
     title_about: Sobre o projeto
+    cameras: Câmeras
+    profile: Perfil
+    hosted_by: Hospedado por
+    technology: Tecnologia
+    developed_by: Desenvolvido por
+  index:
+    no_camera: Não há câmera registrada
+    no_camera_to_show: Não há câmera para ser exibida.
+    description: Descrição
+    description_text: Nenhuma descrição.
+    comment_tag: Comentários
+    no_comments: Nenhum comentário.
+    camera_tag: Câmeras
   cameras:
     title_listing_cameras: Lista de câmeras
     label_name: Nome

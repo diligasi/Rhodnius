@@ -1,3 +1,69 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.about-page {
+  padding: 0 15px 0 25px;
+}
+div.about-page .mark {
+  float: left;
+  height: 20px;
+  margin: 15px 5px 0 -9px;
+  width: 30px;
+}
+div.about-page .line {
+  height: 3px;
+  margin: -10px 0 25px 0;
+  width: 100%;
+}
+div.about-page .main-pic {
+  margin: 0 25px 10px 0;
+  float: left;
+}
+div.about-page p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+div.about-page p.regards {
+  float: right;
+  margin: 25px 40px 20px 0;
+  text-align: right;
+  width: 100%;
+}
+div.about-page div.container-regards {
+  margin: auto;
+  width: 920px;
+}
+div.about-page div.container-team {
+  margin: auto;
+  width: 800px;
+}
+div.about-page div.container-regards ul,
+div.about-page div.container-team ul {
+  clear: both;
+  text-align: center;
+  width: 100%;
+}
+div.about-page div.container-regards ul > li,
+div.about-page div.container-team ul > li {
+  display: inline-block;
+  margin: 0 1% 20px 1%;
+  position: relative;
+  width: 160px;
+}
+div.about-page div.container-regards ul > li a,
+div.about-page div.container-team ul > li a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+div.about-page div.container-regards ul > li a:hover,
+div.about-page div.container-team ul > li a:hover {
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+div.about-page div.container-regards ul > li img.profile,
+div.about-page div.container-team ul > li img.profile {
+  border-radius: 5px;
+  margin-bottom: 3px;
+  padding-bottom: 4px;
+}

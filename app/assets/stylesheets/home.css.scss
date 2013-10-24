@@ -1,0 +1,81 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.grid_2 {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 760px;
+}
+ul {
+  list-style: none;
+}
+usual {
+  background: #181818;
+  color: #111;
+  padding: 15px 20px;
+  width: 500px;
+  border: 1px solid #222;
+  margin: 8px auto;
+}
+.usual li {
+  list-style: none;
+  float: left;
+}
+.usual ul a {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none!important;
+  margin: 1px;
+  margin-left: 0;
+  font: 10px Verdana;
+  color: #FFF;
+  background: #444;
+  border-image: initial;
+  -moz-border-radius: 8px 8px 0 0;
+  /* Para Firefox */
+  -webkit-border-radius: 8px 8px 0 0;
+  /*Para Safari e Chrome */
+  border-radius: 8px 8px 0 0;
+  /* Para Opera 10.5+*/
+  cursor: default;
+}
+.usual ul a:hover {
+  color: #c2c92d;
+  background: #111;
+}
+.usual ul a.selected {
+  margin-bottom: 0;
+  color: #000;
+  background: #EEE6E6;
+  border-bottom: 1px solid #EEE6E6;
+  border-image: initial;
+  -moz-border-radius: 8px 8px 0 0;
+  /* Para Firefox */
+  -webkit-border-radius: 8px 8px 0 0;
+  /*Para Safari e Chrome */
+  border-radius: 8px 8px 0 0;
+  /* Para Opera 10.5+*/
+  cursor: default;
+}
+.usual div {
+  padding: 10px 10px 8px 10px;
+  *padding-top: 3px;
+  *margin-top: -15px;
+  clear: left;
+  background: #EEE6E6;
+  font: 10pt Georgia;
+  min-height: 80px;
+}
+.usual div a {
+  color: #000;
+  font-weight: bold;
+}
+.border-bot {
+  background: url(../images/pic.gif) 0 bottom repeat-x;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+  width: 100%;
+}

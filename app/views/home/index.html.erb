@@ -1,0 +1,39 @@
+<article class="grid_2">
+  <div class="usual">
+    <ul class="idTabs">
+      <li><a href="#jquery"><%= I18n.t('.index.comment_tag') %></a></li>
+      <li><a href="#official"><%= I18n.t('.index.camera_tag') %></a></li>
+    </ul>
+    <div id="jquery">
+      <% if Comment.count > 0 %>
+        <% @current_camera.comments.each do |comment| %>
+          <p class="border-bot">
+            <label class="com">Author:</label>
+            <%= comment.author %>
+            <br />
+            <label class="com">Comment:</label>
+            <%= comment.comment %>
+          </p>
+        <% end %>
+      <% else %>
+        <p class="border-bot"><%= I18n.t('.index.no_comments') %></p>
+      <% end %>
+    </div>
+    <div id="official">
+      <% if Camera.count > 0 %>
+        <% @cont = 1 %>
+        <% Camera.all.each do |cam| %>
+          <% if @cont == 4 %>
+            <br />
+            <% @cont = 1 %>
+          <% end %>
+          <%= link_to image_tag("../images/simple_cam_logo.png", :border => 0), home_path(:selected_cam_id => cam.id), :class => "selectCam", :remote => true %>
+          <!--<%= link_to cam.name.to_s, home_path(:selected_cam_id => cam.id), :class => "selectCam", :remote => true %>-->
+          <% @cont += 1 %>
+        <% end %>
+      <% else %>
+          <p class="border-bot"><%= I18n.t('.index.no_camera_to_show') %></p>
+      <% end %>
+    </div>
+  </div>
+</article>

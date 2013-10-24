@@ -10,6 +10,12 @@ es:
         other: "%{count} errores evitaron guardar este %{resource}:"
  
   devise:
+    links:
+      sign_in: Iniciar sesión
+      sign_up: Crear cuenta
+      forgot: ¿Olvidó su contraseña?
+      confirmation: ¿No has recibido la confirmación?
+      unlock: ¿No has recibido las instrucciones de desbloqueo?
     failure:
       already_authenticated: 'Ya está conectado/a.'
       unauthenticated: 'Necesita acceder a su cuenta o registrarse antes de continuar.'

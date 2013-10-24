@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+    $('#language_value').change(function(){
+        var url = $(this).val();
+        window.location = url;
+    });
+});

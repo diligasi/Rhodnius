@@ -1,31 +1,44 @@
 es:
-  hello: "Hola, mundo"
+  hello: "Hola"
   translation:
     link_to_show: Detalhes
     link_to_edit: Cambiar configuracíones
     link_to_destroy: Apagar
     link_to_back: Volver
     alert_destroy_confirm: ¿Está seguro?
-  about:
+    home: Inicio
     title_about: Sobre el proyecto
+    cameras: Cámaras
+    profile: Perfil
+    hosted_by: Hosted by
+    technology: Tecnología
+    developed_by: Desarrollado por
+  index:
+    no_camera: Sin cámara registrada
+    no_camera_to_show: Ninguna cámara para mostrar.
+    description: Descripción
+    description_text: Ninguna descripción.
+    comment_tag: Comentarios
+    no_comments: No hay comentarios.
+    camera_tag: Cámaras
   cameras:
-    title_listing_cameras: Lista de cameras
+    title_listing_cameras: Lista de cámaras
     label_name: Nombre
     label_host: Host
     label_port: Puerta
     label_camera_user: Usuario
     label_camera_password: Contraseña
     lanel_description: Descripcíon
-    link_to_new_camera: Nueva Camera
-    title_editing: Editar camera
-    title_new: Crear camera
-    notice_successfully_created: Camera creada con éxito.
-    notice_successfully_updated: Camera actualizada con éxito.
+    link_to_new_camera: Nueva Cámara
+    title_editing: Editar cámara
+    title_new: Crear cámara
+    notice_successfully_created: Cámara creada con éxito.
+    notice_successfully_updated: Cámara actualizada con éxito.
   comments:
     title_listing_comments: Lista comentarios
     label_user: Usuario
     label_comment: Comentario
-    label_camera: Camera
+    label_camera: Cámara
     link_to_new_comment: Nuevo Comentario
     title_editing: Editar comentario
     title_new: Crear comentario

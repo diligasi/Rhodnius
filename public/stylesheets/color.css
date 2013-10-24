@@ -1,0 +1,83 @@
+/****************************************************************
+ * Created by Diogo de Lima                                     *
+ * Date: August 9, 2013                                         *
+ *                                                              *
+ ****************************************************************/
+
+ /***************************************************************
+  * Settings colors and images used on the entire system        *
+  ***************************************************************/
+
+body {
+    background: url(../images/body-bg.jpg) center top repeat #151515;
+    color: #7f7f7f;
+}
+.main-bg {
+    background: url(../images/bg-2.jpg) center top repeat-x;
+}
+.bg {
+    background: url(../images/bg.jpg) center top no-repeat;
+}
+h1 {
+    background: url(../images/h1-bg.jpg) 0 0 no-repeat;
+}
+h1 a {
+    background: url(../images/bug-brother.png) 0 0 no-repeat;
+}
+a {
+    color: #A3BA46;
+}
+a:visited {
+    color: #666;
+}
+header nav {
+    background: url(../images/menu-bg.jpg) 0 0 no-repeat;
+}
+header div.cam {
+    background: #FFFFFF;
+}
+select#language_value {
+    background: #444444;
+    color: #9da212;
+}
+.menu li {
+    background: url(../images/menu-spacer.gif) left top no-repeat;
+}
+.menu>li:first-child {
+    background: none;
+}
+.menu>li:first-child>a {
+    background: url(../images/menu-home.png) center -25px no-repeat;
+}
+.menu>li:first-child>a.active, .menu>li:first-child>a:hover {
+    background-position: center 15px;
+}
+.menu li a {
+    color: #808080;
+}
+.menu li a.active, .menu>li>a:hover {
+    color: #C2C92D;
+}
+h3 {
+    color: #fff;
+}
+h4 {
+    color: #f0f0f0;
+}
+.container_top {
+    background: url(../images/container-top.png) left top no-repeat;
+}
+.container_mid {
+    background: url(../images/container-tail.png) left top repeat-y;
+}
+.container_bot {
+    background: url(../images/container-bot.png) left bottom no-repeat;
+}
+/*************************** About Page ***************************/
+div.about-page .line {
+    background: #9da212;
+}
+div.about-page div.container-regards ul > li img.profile,
+div.about-page div.container-team ul > li img.profile {
+    background: #9da212;
+}

@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+    <%= I18n.t('.hello') %> <%= current_user.name %>! [<%= link_to 'Logout', logoff_path, :method => :delete %>]
+<% else %>
+    <%= link_to t('devise.links.sign_in'), login_path, :class => 'ajax' %> |
+    <%= link_to t('devise.links.sign_up'), register_path, :class => 'ajax' %>
+<% end %>

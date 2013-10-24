@@ -11,3 +11,176 @@
  *= require_self
  *= require_tree .
  */
+/********************************************************************************
+ * Created by Diogo de Lima                                                     *
+ * Date: August 9, 2013                                                         *
+ *                                                                              *
+ ********************************************************************************/
+
+/*******************************************************************************
+ * General settings to the entire system                                       *
+ *******************************************************************************/
+
+* {
+    background: transparent;
+    border: 0;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: top;
+    z-index: 0;
+}
+body {
+    font-family: Arial, Helvetica, Sans-Serif;
+    height: 100%;
+    line-height: 18px;
+    min-width: 960px;
+}
+.main-bg {
+    min-height: 100%;
+    width: 100%;
+}
+.bg {
+    min-height: 100%;
+    width: 100%;
+}
+.main {
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0;
+    width: 960px;
+}
+/*==================================header======================================*/
+header {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+h1 {
+    float: left;
+    padding: 45px 20px 37px 26px;
+}
+h1 a {
+    display: block;
+    height: 55px;
+    text-indent: -999em;
+    width: 230px;
+}
+a {
+    outline: none;
+}
+.menu li a, .list-1 li a, .link, .link-1, .link-2, .button, h1 a {
+    text-decoration: none;
+}
+.login {
+    float: right;
+    margin: -25px 10px 5px 0;
+}
+select#language_value {
+    margin-top: 3px;
+    padding: 2px;
+    font-size: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 0 #777, 0 -1px #555 inset;
+    -moz-box-shadow: 0 0 0 #777, 0 -1px #555 inset;
+    box-shadow: 0 0 0 #777, 0 -1px #555 inset;
+}
+header div.cam {
+    border-radius: 5px;
+    filter: Alpha(opacity=50);
+    float: left;
+    height: 400px;
+    line-height: 26em;
+    margin: 0 10px 0 0;
+    opacity: 0.5;
+    text-align: center;
+    width: 770px;
+}
+header nav {
+    height: 52px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    width: 100%;
+}
+p, ol, ul, td {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+ol, ul {
+    list-style: none;
+}
+.menu li {
+    float: left;
+    position: relative;
+}
+.menu>li:first-child>a {
+    min-width: 22px;
+    text-indent: -999em;
+}
+.menu li a {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 12px 28px 12px 29px;
+    /*text-transform: capitalize;*/
+}
+.slider-wrapper {
+    width: 960px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+h3 {
+    font-size: 25px;
+    line-height: 2em;
+    margin-bottom: 2px;
+}
+h4 {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+/*==================================content=====================================*/
+#content {
+    width: 100%;
+    padding: 25px 0 45px 0;
+    position: relative;
+    z-index: 1;
+}
+.container_top {
+    padding-top: 6px;
+    width: 100%;
+}
+.container_mid {
+    overflow: hidden;
+    padding: 20px 0 40px;
+    width: 100%;
+}
+.container_bot {
+    padding-bottom: 6px;
+    width: 100%;
+}
+/*==================================footer======================================*/
+footer {
+    padding: 0 0 40px;
+    text-align: center;
+    width: 100%;
+}
+footer div.main {
+    font-size: 10px;
+    line-height: 16px;
+}
+footer span {
+    display: block;
+}

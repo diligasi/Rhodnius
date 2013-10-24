@@ -1,0 +1,11 @@
+<%
+   locale = {:en => '/en', :'pt-BR' => '/pt-BR', :es => '/es'}
+   initial_language = ''
+   locale.each do |key, value|
+     if key == I18n.locale
+       initial_language = value
+     end
+   end
+   options = { 'English' => english_path, 'Português' => portuguese_path, 'Español' => spanish_path }
+%>
+<%= select(:language, :value, options, {:selected => initial_language }) %>

@@ -1,13 +1,26 @@
 en:
-  hello: "Hello world"
+  hello: "Hello"
   translation:
     link_to_show: Show
     link_to_edit: Edit
     link_to_destroy: Destroy
     link_to_back: Back
     alert_destroy_confirm: Are you sure?
-  about:
+    home: Home
     title_about: About the project
+    cameras: Cameras
+    profile: Profile
+    hosted_by: Hosted by
+    technology: Technology
+    developed_by: Developed by
+  index:
+    no_camera: No registered camera
+    no_camera_to_show: No camera to show.
+    description: Description
+    description_text: No description.
+    comment_tag: Comments
+    no_comments: No comments.
+    camera_tag: Cameras
   cameras:
     title_listing_cameras: Listing cameras
     label_name: Name

@@ -1,4 +1,6 @@
 Rhodnius::Application.routes.draw do
+  ## Main page
+  root 'home#index'
 
   ## Showing Devise witch controller to use
   devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
