@@ -81,3 +81,7 @@ div.about-page div.container-regards ul > li img.profile,
 div.about-page div.container-team ul > li img.profile {
     background: #9da212;
 }
+div.about-page div.container-regards ul > li a,
+div.about-page div.container-team ul > li a {
+    color: #666666 !important;
+}

@@ -9,7 +9,7 @@ Rhodnius::Application.routes.draw do
   devise_scope :user do
     get '/login' => 'devise/sessions#new'
     get '/register' => 'devise/registrations#new'
-    get '/logoff' => 'devise/sessions#destroy'
+    delete '/logoff' => 'devise/sessions#destroy'
   end
 
   ## Routes for SetLanguage controller
