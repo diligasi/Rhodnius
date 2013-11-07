@@ -7,7 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## User's informations
       t.string :name
-      t.boolean :admin, :defaul => false
+      t.boolean :admin, :default => false
 
       ## Provider's informations
       t.string :provider
