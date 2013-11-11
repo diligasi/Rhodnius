@@ -28,6 +28,7 @@ en:
     sessions:
       new:
         title: Sign in
+        instruction: Connect with a bug Brother account or by clicking in one of the sites below.
         submit: Sign in
       link: Sign in with %{provider}
     unlocks:

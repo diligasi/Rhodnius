@@ -219,7 +219,7 @@ pt-BR:
         password: 'Senha'
         password_confirmation: 'Confirmar Senha'
         current_password: 'Senha Atual'
-        remember_me: 'Lembre-se de mim'
+        remember_me: 'Lembrar'
       article:
         title: 'Título'
         body: 'Conteúdo'
