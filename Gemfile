@@ -40,7 +40,9 @@ gem 'omniauth-google-oauth2'
 # Authentication with Twitter
 gem 'omniauth-twitter'
 
-gem 'rails_12factor', :group: :production
+group :production do
+  gem 'rails_12factor'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
