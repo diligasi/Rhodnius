@@ -1,20 +1,30 @@
-<h2><%= t(".title") %></h2>
+<div class="devise-register">
+  <h2><%= t(".title") %></h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: "well" }) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: "well" }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+    <%#= f.label :email %>
+    <%#= f.email_field :email %>
+    <%= f.email_field :email, id: "email", class: "hidden", value: t("activerecord.attributes.user.email") %>
+    <%= f.email_field :email, :placeholder => t("activerecord.attributes.user.email") %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    <%#= f.label :password %>
+    <%#= f.password_field :password %>
+    <%= f.email_field :password, id: "password", class: "hidden", value: t("activerecord.attributes.user.password") %>
+    <%= f.password_field :password, :placeholder => t("activerecord.attributes.user.password") %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+    <%#= f.label :password_confirmation %>
+    <%#= f.password_field :password_confirmation %>
+    <%= f.email_field :password_confirmation, id: "password-confirmatioin", class: "hidden", value: t("activerecord.attributes.user.password_confirmation") %>
+    <%= f.password_field :password_confirmation, :placeholder => t("activerecord.attributes.user.password_confirmation") %>
 
-  <div class="controls">
-  <%= f.submit t(".submit"), class: "btn" %>
+    <div class="controls">
+      <%= f.submit t(".submit"), class: "button" %>
+    </div>
+  <% end %>
+
+  <div class="shared">
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

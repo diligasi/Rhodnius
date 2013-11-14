@@ -1,13 +1,30 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.devise-login{
+div.devise-login {
   border: 1px solid;    /* REMOVER ESTA LINHA DEPOIS */
   border-radius: 20px;
   height: 235px;
   margin: auto;
   padding: 10px 20px;
   width: 400px;
+}
+div.devise-register {
+  border: 1px solid;    /* REMOVER ESTA LINHA DEPOIS */
+  border-radius: 20px;
+  height: 235px;
+  margin: auto;
+  padding: 10px 20px;
+  width: 190px;
+}
+div.devise-forgot {
+  border: 1px solid;    /* REMOVER ESTA LINHA DEPOIS */
+  border-radius: 20px;
+  height: 150px;
+  margin: auto;
+  padding: 10px 20px;
+  width: 302px;
+
 }
 .formContainer {
   display: inline-block;
@@ -29,16 +46,32 @@ form.well {
 .providers div.providers-group {
   padding: 13px 10px 0 30px;
 }
-div.devise-login input.hidden{
+div.devise-login input.hidden,
+div.devise-register input.hidden,
+div.devise-forgot input.hidden {
   display: none;
 }
+div.devise-forgot var.hide {
+  display: none;
+}
+div.devise-forgot input {
+  width: 288px !important;
+}
+div.devise-forgot input[type="submit"] {
+  width: 300px !important;
+}
 div.devise-login input[type="email"],
-div.devise-login input[type="password"]{
+div.devise-login input[type="password"],
+div.devise-register input[type="email"],
+div.devise-register input[type="password"],
+div.devise-forgot input[type="email"] {
   border: 1px solid #A3BA46;
   background: #070707;
 }
 /****************************** Input type text *******************************/
-div.devise-login input {
+div.devise-login input,
+div.devise-register input,
+div.devise-forgot input {
   color: #A3BA46;
   padding: 5px;
   font-size: 15px;
@@ -57,10 +90,12 @@ div.devise-login input {
   display: block;
   margin-bottom: 15px;
 }
-div.devise-login input[type="password"] {
+div.devise-login input[type="password"],
+div.devise-register input#user_password_confirmation[type="password"] {
    margin-bottom: 3px !important;
  }
-div.devise-login input:focus {
+div.devise-login input:focus,
+div.devise-register input:focus {
   -webkit-box-shadow: 0 0 6px #A3BA46;
   -moz-box-shadow: 0 0 6px #A3BA46;
   box-shadow: 0 0 6px #A3BA46;
@@ -83,13 +118,14 @@ div.devise-login input:focus {
 }
 /****************************** Input type text *******************************/
 input[type="submit"] {
-  color: #2F2F2F;
+  color: #2F2F2F !important;
   background-color: #FDFCFC;
   background-image: linear-gradient(top, #c2c92d 0%, #9ca50c 100%);
   background-image: -moz-linear-gradient(top, #c2c92d 0%, #9ca50c 100%);
   background-image: -webkit-linear-gradient(top, #c2c92d 0%, #9ca50c 100%);
   background-image: -o-linear-gradient(top, #c2c92d 0%, #9ca50c 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c2c92d', endColorstr='#9ca50c');
+  font-weight: bold;
   cursor: pointer;
   width: 185px;
   border: 1px solid;
@@ -104,7 +140,9 @@ input[type="submit"] {
 }
 .button:hover {
   background: #7a8b34;
-  color: #fff;
+  color: #fff !important;
+  font-weight: normal;
+  height: 30px;
 }
 /**************************** Input type checkbox *****************************/
 .remember {
@@ -121,13 +159,15 @@ input[type="submit"] {
 /**************************** Input type checkbox *****************************/
 
 /******************************* Providers link *******************************/
+div.providers-group li {
+  padding-bottom: 10px;
+}
 div a.provider_0,
 div a.provider_1,
 div a.provider_2 {
   display: block;
   height: 45px;
   text-indent: -999em;
-  padding-bottom: 10px;
   width: 125px;
 }
 a.provider_0 {
@@ -154,6 +194,6 @@ div.providers a:hover {
   float: left;
 }
 .shared a {
-  font-size: 12px;
+  font-size: 10px;
 }
 /******************************** Shared links ********************************/

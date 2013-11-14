@@ -1,14 +1,20 @@
-<h2><%= t(".title") %></h2>
+<div class="devise-forgot">
+  <h2><%= t(".title") %></h2>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), html: { method: :post, class: "well" }) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), html: { method: :post, class: "well" }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+    <%#= f.label :email %>
+    <%#= f.email_field :email %>
+    <%= f.email_field :email, id: "email", class: "hidden", value: t("activerecord.attributes.user.email") %>
+    <%= f.email_field :email, :placeholder => t("activerecord.attributes.user.email") %>
 
-  <div class="controls">
-  <%= f.submit t(".submit"), class: "btn" %>
+    <div class="controls">
+      <%= f.submit t(".submit"), class: "button" %>
+    </div>
+  <% end %>
+
+  <div class="shared">
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

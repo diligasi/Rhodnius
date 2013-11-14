@@ -4,6 +4,7 @@
 $(document).ready ->
   email = $("#email").val()
   password = $("#password").val()
+  passworConfirmation = $("#password-confirmatioin").val()
   $("#user_email").focus ->
     @placeholder = ""
 
@@ -15,3 +16,9 @@ $(document).ready ->
 
   $("#user_password").blur ->
     @placeholder = password
+
+  $("#user_password_confirmation").focus ->
+    @placeholder = ""
+
+  $("#user_password_confirmation").blur ->
+    @placeholder = passworConfirmation
