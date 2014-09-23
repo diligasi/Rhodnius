@@ -85,3 +85,30 @@ div.about-page div.container-regards ul > li a,
 div.about-page div.container-team ul > li a {
     color: #666666 !important;
 }
+.border-bot {
+    background: url(../images/pic.gif) 0 bottom repeat-x;
+}
+h6 a.facebook {
+    background: url(../images/facebook_white.png) no-repeat;
+    background-color: #3B5998;
+}
+h6 a.facebook:hover {
+    /*background: url(../images/facebook_dark.png) no-repeat;*/
+    background-color: rgba(59, 89, 152, .5);
+}
+h6 a.twitter {
+    background: url(../images/twitter_white.png) no-repeat;
+    background-color: #00ACED;
+}
+h6 a.twitter:hover {
+    /*background: url(../images/twitter_dark.png) no-repeat;*/
+    background-color: rgba(0, 172, 237, .5);
+}
+h6 a.youtube {
+    background: url(../images/youtube_white.png) no-repeat;
+    background-color: #CD332D;
+}
+h6 a.youtube:hover {
+    /*background: url(../images/youtube_dark.png) no-repeat;*/
+    background-color: rgba(205, 51, 45, .5);
+}

@@ -7,7 +7,7 @@ div.devise-login {
   height: 235px;
   margin: auto;
   padding: 10px 20px;
-  width: 400px;
+  width: 401px;
 }
 div.devise-register {
   border: 1px solid;    /* REMOVER ESTA LINHA DEPOIS */
@@ -15,7 +15,7 @@ div.devise-register {
   height: 235px;
   margin: auto;
   padding: 10px 20px;
-  width: 190px;
+  width: 205px;
 }
 div.devise-forgot {
   border: 1px solid;    /* REMOVER ESTA LINHA DEPOIS */
@@ -25,6 +25,9 @@ div.devise-forgot {
   padding: 10px 20px;
   width: 302px;
 
+}
+div.devise-register .button{
+  width: 202px;
 }
 .formContainer {
   display: inline-block;

@@ -27,8 +27,8 @@
             <br />
             <% @cont = 1 %>
           <% end %>
-          <%= link_to image_tag("../images/simple_cam_logo.png", :border => 0), home_path(:selected_cam_id => cam.id), :class => "selectCam", :remote => true %>
-          <!--<%= link_to cam.name.to_s, home_path(:selected_cam_id => cam.id), :class => "selectCam", :remote => true %>-->
+          <%= link_to image_tag('../images/simple_cam_logo.png', :border => 0), home_path(:selected_cam_id => cam.id), :class => 'selectCam', :remote => true %>
+          <!--<%= link_to cam.name.to_s, home_path(:selected_cam_id => cam.id), :class => 'selectCam', :remote => true %>-->
           <% @cont += 1 %>
         <% end %>
       <% else %>
@@ -36,4 +36,9 @@
       <% end %>
     </div>
   </div>
+</article>
+<article class="grid_3">
+    <h6><%= link_to 'Facebook Bug Brother Brazil', 'https://www.facebook.com/pages/Bug-brother-brazil/281987428656852?ref=hl', :target => '_blanck', title: "#{I18n.t('.index.like_us')}", class: 'facebook social_link' %></h6><br />
+    <h6><%= link_to 'Twitter Bug Brother Brazil', 'https://twitter.com/BugBroBrazil', :target => '_blanck', title: "#{I18n.t('.index.follow_us')}", class: 'twitter social_link' %></h6><br />
+    <h6><%= link_to 'YouTube Bug Brother Brazil', 'https://www.youtube.com/channel/UCchulX1wSkUgCKpDAOR-GVA', :target => '_blanck', title: "#{I18n.t('.index.our_channel')}", class: 'youtube social_link' %></h6><br />
 </article>

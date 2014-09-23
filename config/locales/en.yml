@@ -21,6 +21,9 @@ en:
     comment_tag: Comments
     no_comments: No comments.
     camera_tag: Cameras
+    like_us: Like us
+    follow_us: Follow us
+    our_channel: Subscribe on our channel
   cameras:
     title_listing_cameras: Listing cameras
     label_name: Name

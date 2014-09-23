@@ -9,16 +9,36 @@
   margin-right: 10px;
   width: 760px;
 }
+.grid_3 {
+  display: inline;
+  float: right;
+  position: relative;
+  margin: 8px 10px;
+  width: 160px;
+}
+.grid_3 h6 {
+  height: 48px;
+  width: 48px;
+  margin: 0 auto;
+}
+h6 .social_link {
+  display: block;
+  text-indent: -999em;
+  height: 48px;
+  width: 48px;
+}
 ul {
   list-style: none;
 }
-usual {
+.usual {
   background: #181818;
   color: #111;
   padding: 15px 20px;
-  width: 500px;
+  /*width: 500px;*/
+  width: 720px;
   border: 1px solid #222;
   margin: 8px auto;
+  min-height: 160px;
 }
 .usual li {
   list-style: none;
@@ -67,14 +87,14 @@ usual {
   clear: left;
   background: #EEE6E6;
   font: 10pt Georgia;
-  min-height: 80px;
+  /*min-height: 80px;*/
+  min-height: 110px;
 }
 .usual div a {
   color: #000;
   font-weight: bold;
 }
 .border-bot {
-  background: url(../images/pic.gif) 0 bottom repeat-x;
   margin-bottom: 18px;
   padding-bottom: 15px;
   width: 100%;
