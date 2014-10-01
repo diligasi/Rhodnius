@@ -19,7 +19,7 @@ Devise.setup do |config|
   require 'omniauth-twitter'
 
   config.omniauth :facebook, '745887575426325', '954a6de7212e5f1e031c88078fb60664'
-  config.omniauth :google_oauth2, '1073303279835.apps.googleusercontent.com', 'dJL8zQwmiRCcLauFULLL7Lvc', { access_type: 'offline', approval_prompt: '' }
+  config.omniauth :google_oauth2, '1073303279835.apps.googleusercontent.com', 'dJL8zQwmiRCcLauFULLL7Lvc', :client_options => {:ssl => {:ca_file => Rails.root.join('cacert.pem').to_s}, access_type: 'offline', approval_prompt: '', provider_ignores_state: true }
   config.omniauth :twitter ,'ptFn9ptSb1Tn6An8ye7XnA', 'Vk0UWIVdFkgolCmKnuZxXlzezMEZ9gSD9orvvyEUeo'
 
   # ==> Configuration for any authentication mechanism

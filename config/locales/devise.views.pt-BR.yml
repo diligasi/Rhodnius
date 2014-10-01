@@ -28,7 +28,8 @@ pt-BR:
     sessions:
       new:
         title: Login
-        instruction: Conecte-se com uma conta Bug Brother ou clicando em um dos sites ao lado.
+        #instruction: Conecte-se com uma conta Bug Brother ou clicando em um dos sites ao lado.
+        instruction: Conecte-se com sua rede social preferida clicando em um dos botões ao lado.
         submit: Login
       link: Login com %{provider}
     unlocks:

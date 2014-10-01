@@ -1,3 +1,42 @@
+<style>
+    .text_area {
+        background-color: rgba(255, 255, 255, .5);
+        border: 1px solid #c2c92d;
+        border-radius: 4px;
+        width: 98.5%;
+        height: 90px;
+        padding: 5px;
+        color: #4A7023;
+        text-align: justify;
+    }
+    .max_char {
+        /*background-color: rgba(255, 255, 255, .5);
+        border: 1px solid #c2c92d;
+        border-radius: 4px;
+        padding: 5px;*/
+        color: #4A7023;
+        float: right;
+        margin: 5px 0;
+        /*width: 168px;*/
+    }
+    .max_char label {
+        width: 21px;
+    }
+    input[type='submit'] {
+        float: right;
+        width: 125px;
+        height: 20px;
+    }
+    div.actions {
+        min-height: 30px;
+    }
+</style>
+<script>
+    $(document).on('keyup', '#comment_comment', function(event){
+        var r = 500 - $(this).val().length;
+        $('#max').text(r);
+    });
+</script>
 <%= form_for(@comment) do |f| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +50,22 @@
     </div>
   <% end %>
 
+    <%#= f.text_field :user_id, text: current_user.id, style: 'visibility: hidden;' %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :camera_id, value: session[:id_camera] %>
+    <%#= f.text_field :camera_id, text: current_user.id, style: 'visibility: hidden;' %>
+
+    <div style="min-height: 30px;">
+      <p style="font-weight: bold"><%= I18n.t('.comments.label_user') %>:</p>
+      <%= f.label current_user.name, style: 'color: #4A7023;' %>
+    </div>
+
+    <div style="min-height: 30px;">
+        <p style="font-weight: bold"><%= I18n.t('.comments.label_comment') %>:</p>
+        <%= f.text_area :comment, class: 'text_area', maxlength: 500 %>
+        <p class="max_char"><%= label_tag :left_chars, 500, id: 'max' %> <%= I18n.t('.index.max_char') %></p>
+    </div>
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

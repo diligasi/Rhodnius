@@ -20,6 +20,8 @@ en:
     description_text: No description.
     comment_tag: Comments
     no_comments: No comments.
+    to_comment: Sign in to comment.
+    max_char: remaining characters.
     camera_tag: Cameras
     like_us: Like us
     follow_us: Follow us
@@ -27,6 +29,8 @@ en:
   cameras:
     title_listing_cameras: Listing cameras
     label_name: Name
+    label_type: Type
+    label_full_url: URL
     label_host: Host
     label_port: Port
     label_camera_user: Camera user

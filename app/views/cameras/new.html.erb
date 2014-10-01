@@ -1,5 +1,53 @@
-<h1><%= I18n.t('.cameras.title_new') %></h1>
+<style>
+  div input,
+  form div select,
+  div textarea {
+    color: #A3BA46;
+    padding: 5px;
+    font-size: 15px;
+    text-shadow: 0 1px 0 #fff;
+    outline: none;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, left bottombottom, from(#bcbcbe), to(#ffffff));
+    background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #666;
+    -webkit-box-shadow: 1px 1px 0 #efefef;
+    -moz-box-shadow: 1px 1px 0 #efefef;
+    box-shadow:  1px 1px 0 #efefef;
+    display: block;
+    margin-bottom: 15px;
+  }
+  div section {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  div article {
+    float: left;
+    margin-right: 20px;
+  }
+  div.actions, div input[type="submit"] {
+    margin: 0;
+  }
+  div.actions {
+    min-height: 30px;
+    padding-left: 252px;
+    padding-bottom: 15px;
+  }
+  #internet_state {
+      display: none;
+      visibility: hidden;
+  }
+</style>
+<div class="about-page">
+  <img src="../images/right-arrow-icon.png" class="mark" />
+  <h3><%= I18n.t('.cameras.title_new') %></h3>
+  <hr class="line" />
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to I18n.t('.translation.link_to_back'), cameras_path %>
+  <%= link_to I18n.t('.translation.link_to_back'), cameras_path %>
+</div>

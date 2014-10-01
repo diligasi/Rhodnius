@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008045759) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140927225655) do
 
   create_table "cameras", force: true do |t|
     t.string   "name"
@@ -25,6 +22,8 @@ ActiveRecord::Schema.define(version: 20131008045759) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.string   "full_url"
   end
 
   create_table "comments", force: true do |t|
@@ -35,14 +34,14 @@ ActiveRecord::Schema.define(version: 20131008045759) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["camera_id"], name: "index_comments_on_camera_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+  add_index "comments", ["camera_id"], name: "index_comments_on_camera_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "name"
-    t.boolean  "admin"
+    t.boolean  "admin",                  default: false
     t.string   "provider"
     t.string   "uid"
     t.string   "reset_password_token"
@@ -57,7 +56,7 @@ ActiveRecord::Schema.define(version: 20131008045759) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

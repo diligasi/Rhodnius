@@ -28,10 +28,12 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: I18n.l('.comments.notice_successfully_created') }
+        format.html { redirect_to root_path, notice: I18n.t('.comments.notice_successfully_created') }
+        # format.html { redirect_to @comment, notice: I18n.t('.comments.notice_successfully_created') }
         format.json { render action: 'show', status: :created, location: @comment }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to root_path }
+        # format.html { render action: 'new' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -42,7 +44,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: I18n.l('.comments.notice_successfully_updated') }
+        format.html { redirect_to @comment, notice: I18n.t('.comments.notice_successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +71,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:comment)
+      params.require(:comment).permit(:comment, :user_id, :camera_id)
     end
 end

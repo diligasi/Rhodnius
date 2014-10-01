@@ -8,6 +8,7 @@ Rhodnius::Application.routes.draw do
   ## Configuring Devise's routes
   devise_scope :user do
     get '/login' => 'devise/sessions#new'
+    post '/login' => 'devise/sessions#create'
     get '/register' => 'devise/registrations#new'
     delete '/logoff' => 'devise/sessions#destroy'
   end

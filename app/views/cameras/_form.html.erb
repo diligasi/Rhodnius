@@ -1,41 +1,100 @@
-<%= form_for(@camera) do |f| %>
-  <% if @camera.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@camera.errors.count, "error") %> prohibited this camera from being saved:</h2>
+<script>
+  $(document).on('change', '#type_value', function(event){
+    if ($('#type_value').val() === 'Internet'){
+      $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
+      $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
+    }else{
+      $('#internet_state').css({'visibility': 'hidden', 'display': 'none'});
+      $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
+    }
+  });
 
-      <ul>
-      <% @camera.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  $(document).ready(function(){
+    if ($('#type_value').val() === 'Internet'){
+      $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
+      $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
+    }else{
+      $('#internet_state').css({'visibility': 'hidden', 'display': 'none'});
+      $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
+    }
+  });
+</script>
+
+<div class="usual" style="margin-left: 0;">
+  <%= form_for(@camera) do |f| %>
+    <% if @camera.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@camera.errors.count, "error") %> prohibited this camera from being saved:</h2>
+
+        <ul>
+          <% @camera.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <p>
+         Altere o tipo de acoro com suas necessidades, se o vídeo tem um link da internet como vídeos do YouTube por
+         exemplo selecione o tipo Internet e forneça a URL do vídeo, caso seja um vídeo de uma câmera IP selecione o
+         tipo Câmera e forneça os dados para acesso.
+      </p>
+
+      <br />
+
+      <section>
+        <article>
+          <b><%= I18n.t('.cameras.label_name') %></b><br />
+          <%= f.text_field :name %>
+        </article>
+
+        <article>
+          <b><%= I18n.t('.cameras.label_type') %></b><br />
+          <%#= f.select :type, :value, @camera_types %>
+          <%= f.select :type, @camera_types.each { |p| p } %>
+        </article>
+      </section>
+
+      <section id="internet_state">
+        <article>
+          <b><%= I18n.t('.cameras.label_full_url') %></b><br />
+          <%= f.text_field :full_url, style: 'width: 415px;' %>
+        </article>
+      </section>
+
+      <section id="cam_state">
+        <section>
+          <article>
+            <b><%= I18n.t('.cameras.label_host') %></b><br>
+            <%= f.text_field :host %>
+          </article>
+
+          <article>
+            <b><%= I18n.t('.cameras.label_port') %></b><br>
+            <%= f.text_field :port %>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <b><%= I18n.t('.cameras.label_camera_user') %></b><br>
+            <%= f.text_field :camera_user %>
+          </article>
+
+          <article>
+            <b><%= I18n.t('.cameras.label_camera_password') %></b><br>
+            <%= f.text_field :camera_user_password %>
+          </article>
+        </section>
+      </section>
+
+      <b><%= I18n.t('.cameras.lanel_description') %></b><br>
+      <%= f.text_area :description, style: 'width: 415px; height: 80px;' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= I18n.t('.cameras.label_name') %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= I18n.t('.cameras.label_host') %><br>
-    <%= f.text_field :host %>
-  </div>
-  <div class="field">
-    <%= I18n.t('.cameras.label_port') %><br>
-    <%= f.text_field :port %>
-  </div>
-  <div class="field">
-    <%= I18n.t('.cameras.label_camera_user') %><br>
-    <%= f.text_field :camera_user %>
-  </div>
-  <div class="field">
-    <%= I18n.t('.cameras.label_camera_password') %><br>
-    <%= f.text_field :camera_user_password %>
-  </div>
-  <div class="field">
-    <%= I18n.t('.cameras.lanel_description') %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

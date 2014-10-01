@@ -1,9 +1,10 @@
 <ul class="menu">
   <li><%= link_to I18n.t('.translation.home'), root_path %></li>
   <li><%= link_to I18n.t('.translation.title_about'), about_path %></li>
-  <%# if current_user && current_user.admin %>
-      <!--<li><%# link_to 'Cameras', cameras_path %></li>
-  <%# elsif current_user %>
-      <li><%# link_to 'Profile', edit_user_password_path %></li>-->
-  <%# end %>
+  <% if current_user && current_user.admin %>
+      <li><%= link_to 'Cameras', cameras_path %></li>
+      <li><%#= link_to 'Profile', edit_user_password_path %></li>
+  <% elsif current_user %>
+      <li><%#= link_to 'Profile', edit_user_password_path %></li>
+  <% end %>
 </ul>

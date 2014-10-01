@@ -1,37 +1,45 @@
-<h1><%= I18n.t('.cameras.title_listing_cameras') %></h1>
+<div class="about-page">
+  <img src="../images/right-arrow-icon.png" class="mark" />
+  <h3><%= I18n.t('.cameras.title_listing_cameras') %></h3>
+  <hr class="line" />
 
-<table>
-  <thead>
-    <tr>
-      <th><%= I18n.t('.cameras.label_name') %></th>
-      <th><%= I18n.t('.cameras.label_host') %></th>
-      <th><%= I18n.t('.cameras.label_port') %></th>
-      <th><%= I18n.t('.cameras.label_camera_user') %></th>
-      <th><%= I18n.t('.cameras.label_camera_password') %></th>
-      <th><%= I18n.t('.cameras.lanel_description') %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cameras.each do |camera| %>
+  <table class="bugTable">
+    <thead>
       <tr>
-        <td><%= camera.name %></td>
-        <td><%= camera.host %></td>
-        <td><%= camera.port %></td>
-        <td><%= camera.camera_user %></td>
-        <td><%= camera.camera_user_password %></td>
-        <td><%= camera.description %></td>
-        <td><%= link_to I18n.t('.translation.link_to_show'), camera %></td>
-        <td><%= link_to I18n.t('.translation.link_to_edit'), edit_camera_path(camera) %></td>
-        <td><%= link_to I18n.t('.translation.link_to_destroy'), camera, method: :delete, data: { confirm: I18n.t('.translation.alert_destroy_confirm') } %></td>
+        <th><%= I18n.t('.cameras.label_name') %></th>
+        <th><%= I18n.t('.cameras.label_type') %></th>
+        <th><%= I18n.t('.cameras.label_host') %></th>
+        <th><%= I18n.t('.cameras.label_port') %></th>
+        <th><%= I18n.t('.cameras.label_camera_user') %></th>
+        <th><%= I18n.t('.cameras.label_camera_password') %></th>
+        <th><%= I18n.t('.cameras.label_full_url') %></th>
+        <th><%= I18n.t('.cameras.lanel_description') %></th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @cameras.each do |camera| %>
+        <tr>
+          <td><%= camera.name %></td>
+          <td><%= camera.type.blank? ? '---'.html_safe : camera.type %></td>
+          <td><%= camera.host.blank? ? '---'.html_safe : camera.host %></td>
+          <td><%= camera.port.blank? ? '---'.html_safe : camera.port %></td>
+          <td><%= camera.camera_user.blank? ? '---'.html_safe : camera.camera_user %></td>
+          <td><%= camera.camera_user_password.blank? ? '---'.html_safe : camera.camera_user_password %></td>
+          <td><%= camera.full_url.blank? ? '---'.html_safe : camera.full_url %></td>
+          <td><%= camera.description %></td>
+          <td><%= link_to I18n.t('.translation.link_to_show'), camera %></td>
+          <td><%= link_to I18n.t('.translation.link_to_edit'), edit_camera_path(camera) %></td>
+          <td><%= link_to I18n.t('.translation.link_to_destroy'), camera, method: :delete, data: { confirm: I18n.t('.translation.alert_destroy_confirm') } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to I18n.t('.cameras.link_to_new_camera'), new_camera_path %>
+  <br>
+
+  <%= link_to I18n.t('.cameras.link_to_new_camera'), new_camera_path %>
+</div>

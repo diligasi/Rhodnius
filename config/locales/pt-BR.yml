@@ -20,6 +20,8 @@ pt-BR:
     description_text: Nenhuma descrição.
     comment_tag: Comentários
     no_comments: Nenhum comentário.
+    to_comment: Logue-se para comentar.
+    max_char: caracteres restantes.
     camera_tag: Câmeras
     like_us: Curta nossa página
     follow_us: Siga a nossa página
@@ -27,6 +29,8 @@ pt-BR:
   cameras:
     title_listing_cameras: Lista de câmeras
     label_name: Nome
+    label_type: Tipo
+    label_full_url: URL
     label_host: Host
     label_port: Porta
     label_camera_user: Usuário

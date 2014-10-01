@@ -20,6 +20,8 @@ es:
     description_text: Ninguna descripción.
     comment_tag: Comentarios
     no_comments: No hay comentarios.
+    to_comment: Inicie la sesión para comentar.
+    max_char: caracteres restantes.
     camera_tag: Cámaras
     like_us: Nos guste
     follow_us: Síguenos
@@ -27,6 +29,8 @@ es:
   cameras:
     title_listing_cameras: Lista de cámaras
     label_name: Nombre
+    label_type: Tipo
+    label_full_url: Sitio
     label_host: Host
     label_port: Puerta
     label_camera_user: Usuario

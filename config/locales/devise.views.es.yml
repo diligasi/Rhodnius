@@ -28,7 +28,8 @@ es:
     sessions:
       new:
         title: Iniciar sesión
-        instruction: Inicie la sesión con una cuenta Bug Brother o haciendo un clic en uno de los seguiemtes sitios.
+        #instruction: Inicie la sesión con una cuenta Bug Brother o haciendo un clic en uno de los seguiemtes sitios.
+        instruction: Inicie la sesión con tu red social favorita haciendo un clic en uno de los botones de abajo.
         submit: Iniciar sesión
       link: Inicia sesión con %{provider}
     unlocks:

@@ -1,4 +1,5 @@
 class CamerasController < ApplicationController
+  before_action :set_type_combo_values, only: [:new, :create, :edit, :update]
   before_action :set_camera, only: [:show, :edit, :update, :destroy]
 
   # GET /cameras
@@ -24,11 +25,12 @@ class CamerasController < ApplicationController
   # POST /cameras
   # POST /cameras.json
   def create
+    set_default_dimension!(camera_params[:full_url]) unless camera_params[:full_url].blank?
     @camera = Camera.new(camera_params)
 
     respond_to do |format|
       if @camera.save
-        format.html { redirect_to @camera, notice: I18n.l('.cameras.notice_successfully_created') }
+        format.html { redirect_to @camera, notice: I18n.t('.cameras.notice_successfully_created') }
         format.json { render action: 'show', status: :created, location: @camera }
       else
         format.html { render action: 'new' }
@@ -40,9 +42,11 @@ class CamerasController < ApplicationController
   # PATCH/PUT /cameras/1
   # PATCH/PUT /cameras/1.json
   def update
+    set_default_dimension!(camera_params[:full_url]) unless camera_params[:full_url].blank?
+
     respond_to do |format|
       if @camera.update(camera_params)
-        format.html { redirect_to @camera, notice: I18n.l('.cameras.notice_successfully_updated') }
+        format.html { redirect_to @camera, notice: I18n.t('.cameras.notice_successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +73,14 @@ class CamerasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def camera_params
-      params.require(:camera).permit(:name, :host, :port, :camera_user, :camera_user_password, :description)
+      params.require(:camera).permit(:name, :host, :port, :camera_user, :camera_user_password, :description, :type, :full_url)
     end
+
+  def set_type_combo_values
+    @camera_types = %w(Câmera Internet)
+  end
+
+  def set_default_dimension!(full_url)
+    full_url.gsub(full_url[8, 11], 'width="770"').gsub(full_url[20, 12], 'height="367"')
+  end
 end

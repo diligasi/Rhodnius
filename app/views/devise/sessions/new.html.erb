@@ -2,6 +2,7 @@
   <div class="formContainer">
     <p><%= t(".instruction") %></p>
 
+  <div style="display: none; visibility: hidden">
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: "well" }) do |f| %>
       <%= f.email_field :email, id: "email", class: "hidden", value: t("activerecord.attributes.user.email") %>
       <%= f.email_field :email, :placeholder => t("activerecord.attributes.user.email") %>
@@ -21,13 +22,14 @@
         <%= f.submit t(".submit"), class: "button" %>
       </div>
     <% end %>
+  </div>
 
     <div class="providers">
       <div class="providers-group"><%= render "devise/shared/providers" %></div>
     </div>
   </div>
 
-  <div class="shared">
+  <div class="shared" style="display: none; visibility: hidden">
     <%= render "devise/shared/links" %>
   </div>
 </div>

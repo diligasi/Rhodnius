@@ -1,3 +1,16 @@
+<style>
+    .selectCam {
+        text-decoration: none;
+    }
+    .selectCam img {
+        width: 97px;
+        height: 90px;
+    }
+    .selectCam:hover {
+        background-color: transparent;
+    }
+</style>
+<!--todo: Refatorar -->
 <article class="grid_2">
   <div class="usual">
     <ul class="idTabs">
@@ -5,31 +18,34 @@
       <li><a href="#official"><%= I18n.t('.index.camera_tag') %></a></li>
     </ul>
     <div id="jquery">
-      <% if Comment.count > 0 %>
-        <% @current_camera.comments.each do |comment| %>
-          <p class="border-bot">
-            <label class="com">Author:</label>
-            <%= comment.author %>
+      <% if user_signed_in? %>
+        <%= render 'comments/form' %>
+      <% else %>
+        <p class="border-bot"><%= I18n.t('.index.to_comment') %></p>
+      <% end %>
+
+      <% unless Comment.count.zero? %>
+        <br />
+        <% @current_camera.comment.each do |comment| %>
+          <p class="border-bot" style="width: 98.5%; padding: 10px; color: #4A7023;">
+            <label class="com" style="font-weight: bold; color: #000;"><%= I18n.t('.comments.label_user') %>: </label>
+            <%= comment.user.name %>
             <br />
-            <label class="com">Comment:</label>
+            <label class="com" style="font-weight: bold; color: #000;"><%= I18n.t('.comments.label_comment') %>: </label>
             <%= comment.comment %>
+            <br />
+            <span style="float: right; font-size: 9px;"><%= comment.created_at.strftime("posted on %b, %m %Y - %H:%M") %></span>
+            <br />
           </p>
         <% end %>
       <% else %>
-        <p class="border-bot"><%= I18n.t('.index.no_comments') %></p>
+        <%= I18n.t('.index.no_comments') %>
       <% end %>
     </div>
     <div id="official">
       <% if Camera.count > 0 %>
-        <% @cont = 1 %>
         <% Camera.all.each do |cam| %>
-          <% if @cont == 4 %>
-            <br />
-            <% @cont = 1 %>
-          <% end %>
-          <%= link_to image_tag('../images/simple_cam_logo.png', :border => 0), home_path(:selected_cam_id => cam.id), :class => 'selectCam', :remote => true %>
-          <!--<%= link_to cam.name.to_s, home_path(:selected_cam_id => cam.id), :class => 'selectCam', :remote => true %>-->
-          <% @cont += 1 %>
+          <%= link_to image_tag('../images/simple_cam_logo.png', :border => 0), root_path(:selected_cam_id => cam.id), :class => 'selectCam', :remote => true, :title => cam.name.capitalize %>
         <% end %>
       <% else %>
           <p class="border-bot"><%= I18n.t('.index.no_camera_to_show') %></p>
