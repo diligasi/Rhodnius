@@ -1,6 +1,6 @@
 <script>
-  $(document).on('change', '#type_value', function(event){
-    if ($('#type_value').val() === 'Internet'){
+  $(document).on('change', '#camera_type', function(event){
+    if ($('#camera_type').val() === 'Internet'){
       $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
       $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
     }else{
@@ -8,16 +8,26 @@
       $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
     }
   });
+//  $(document).on('change', '#type_value', function(event){
+//    if ($('#type_value').val() === 'Internet'){
+//      $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
+//      $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
+//    }else{
+//      $('#internet_state').css({'visibility': 'hidden', 'display': 'none'});
+//      $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
+//    }
+//  });
 
-  $(document).ready(function(){
-    if ($('#type_value').val() === 'Internet'){
-      $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
-      $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
-    }else{
-      $('#internet_state').css({'visibility': 'hidden', 'display': 'none'});
-      $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
-    }
-  });
+//  $(document).ready(function(){
+//    alert(JSON.stringify($('camera_type')));
+//    if ($('#type_value').val() === 'Internet'){
+//      $('#internet_state').css({'visibility': 'visible', 'display': 'inline-block'});
+//      $('#cam_state').css({'visibility': 'hidden', 'display': 'none'});
+//    }else{
+//      $('#internet_state').css({'visibility': 'hidden', 'display': 'none'});
+//      $('#cam_state').css({'visibility': 'visible', 'display': 'inline-block'});
+//    }
+//  });
 </script>
 
 <div class="usual" style="margin-left: 0;">
